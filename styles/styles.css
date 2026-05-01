@@ -10,25 +10,35 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .main-content {
-  padding: var(--padding-main);
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   flex-grow: 1;
+}
+
+.main-content::before {
+  content: '';
+  flex-grow: 0.382;
+}
+
+.main-content::after {
+  content: '';
+  flex-grow: 0.618;
 }
 
 h1 {
   font-family: var(--font-header);
   font-size: var(--font-size-h1);
   font-optical-sizing: auto;
-  font-weight: 800;
+  font-weight: 700;
   font-style: normal;
-  letter-spacing: var(--letter-spacing-normal);
+  letter-spacing: -0.01em;
+  line-height: 0.75;
   margin-bottom: var(--margin-h1-bottom);
   padding-right: var(--font-size-h1);
   font-variant: small-caps;
